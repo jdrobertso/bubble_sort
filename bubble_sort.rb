@@ -1,14 +1,16 @@
-=begin
-for each element in an array, check each item against the next item.
-if the next item is larger than the first, swap them
-do this one less time than the length of the array
-only need to check the number of items up to the number of items minus number of passes
-if number of swaps = 0, you're done sortinggi
-=end
-
 def bubble_sort(arr)
-  x = arr.length
-  for x do
-
+  x=arr.length
+  i=0
+  while i < x
+    arr.each_index { |val| arr[val], arr[val+1] = arr[val+1], arr[val] if val < arr.length - 1 && arr[val] > arr[val+1] }
+    i+= 1
   end
+  puts arr
+end
+
+bubble_sort([4,3,78,2,0,2])
+#0,2,2,3,4,78
+
+def bubble_sort_by
+
 end
